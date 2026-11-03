@@ -1,1 +1,23 @@
-/* Styles for deadlines.js. Empty for now. */
+/* Styles for deadlines.js. */
+
+.deadline-label {
+  display: block;
+  width: fit-content;
+  margin-top: 4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+/* Late: red */
+.deadline-overdue {
+  background: #fde2e2;
+  color: #a61b1b;
+}
+
+/* Today or in the next 7 days: yellow */
+.deadline-soon {
+  background: #fff3c4;
+  color: #7a5a00;
+}
