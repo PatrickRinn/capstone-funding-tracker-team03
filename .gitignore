@@ -12,6 +12,9 @@ venv/
 .env
 .claude/settings.local.json
 
+# Your own token log from tools/log_tokens.py (it includes your prompts)
+token_log.md
+
 # Editor and system files
 .vscode/
 .idea/
