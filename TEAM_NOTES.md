@@ -6,3 +6,4 @@ Notes from our team.
 - **Patrick:** I asked my AI to set up the project, implement the deadline badges and colours, and investigate why today's date was marked as overdue. Then I checked the dashboard in the browser, verified the edge cases, and reviewed our team's PRs.
 - **Evan:** I asked my AI to complete Task 1. Then I checked the colours and labels on the page in Chrome.
 - **Michael:** I asked my AI to do Task 1 from TASKS.md. It read AGENTS.md first and wrote the label code in deadlines.js and deadlines.css. Then I checked that pytest passed and looked at what the API sent back, which showed that days_left was one day short.
+- **Cohen:** I asked my AI to add overdue and due-in-days deadline labels, then I checked the dashboard in the browser and ran `python -m pytest`.
