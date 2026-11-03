@@ -1,1 +1,24 @@
-/* Styles for deadlines.js. Empty for now. */
+/* Styles for deadlines.js. */
+
+/* The small label under the deadline date. */
+.deadline-label {
+  display: block;
+  width: fit-content;
+  margin-top: 4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Late: red. */
+.deadline-overdue {
+  background: #fdecec;
+  color: #991b1b;
+}
+
+/* Today or in the next 7 days: yellow. */
+.deadline-soon {
+  background: #fef3c7;
+  color: #92400e;
+}
