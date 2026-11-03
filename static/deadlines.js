@@ -3,7 +3,7 @@
 //   cell         the deadline cell (<td>)
 //   opportunity  the row's data, including days_left from the server
 function showDeadline(row, cell, opportunity) {
-  const label = deadlineLabel(opportunity.days_left);
+  const label = deadlineLabel(opportunity.days_left, opportunity.status);
   if (label === "") {
     return;
   }
@@ -18,9 +18,16 @@ function showDeadline(row, cell, opportunity) {
   cell.appendChild(badge);
 }
 
+// Statuses where the application has already been sent in.
+const SUBMITTED_STATUSES = ["Submitted", "Successful", "Unsuccessful"];
+
 // Turns days_left into a label. Deadlines more than 7 days away get no label.
-function deadlineLabel(daysLeft) {
+// Rows that are already submitted are never labelled "Overdue".
+function deadlineLabel(daysLeft, status) {
   if (daysLeft < 0) {
+    if (SUBMITTED_STATUSES.includes(status)) {
+      return "";
+    }
     return "Overdue";
   }
   if (daysLeft === 0) {
